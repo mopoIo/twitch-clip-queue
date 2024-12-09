@@ -5,6 +5,7 @@ import streamableProvider from './streamable/streamableProvider';
 import twitchClipProvider from './twitchClip/twitchClipProvider';
 import twitchVodProvider from './twitchVod/twitchVodProvider';
 import youtubeProvider from './youtube/youtubeProvider';
+import tiktokProvider from './tiktok/tiktokProvider';
 
 const logger = createLogger('CombinedClipProvider');
 
@@ -25,6 +26,7 @@ class CombinedClipProvider implements ClipProvider {
     [youtubeProvider.name]: youtubeProvider,
     [streamableProvider.name]: streamableProvider,
     [afreecaClipProvider.name]: afreecaClipProvider,
+	[tiktokProvider.name]: tiktokProvider,
   };
   enabledProviders: string[] = [];
 
